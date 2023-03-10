@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>CMOT Dibblers Kastanjer </title>
+</head>
+
+<body class="bg-yellow-900">
+    <div id="main" class="mt-40 mx-auto max-w-fit flex-auto">
+        <h1 class="text-3xl font-bold text-gray-800 uppercase text-center">Kund Sidan</h1>
+        <h2 class="text-center text-2xl font-semibold my-2">Välkommen ärade kund!</h2>
+        <p class="text-center max-w-xs mb-2">Vänligen logga in eller skapa en ny användare för att ta del av CMOT
+            Dibblers ödmjuka erbjudanden.</p>
+
+        <button id="login-btn"
+            class="m-2 p-2 border-2 border-gray-600 rounded-lg shadow-slate-800 shadow-md hover:bg-yellow-600 bg-yellow-700">
+            Logga in</button>
+        <button id="signup-btn"
+            class="m-2 p-2 border-2 border-gray-600  rounded-lg shadow-slate-800 shadow-md hover:bg-yellow-600 bg-yellow-700">Registrera
+            ny användare</button>
+    </div>
+
+
+    <div id="login-modal"
+        class="bg-yellow-600 rounded max-w-fit p-6 fixed left-1/3 top-1/4 flex-wrap justify-center items-center z-50 shadow-gray-800 shadow-lg hidden">
+        <h3 class="text-2xl font-semibold uppercase text-center my-3">Logga in</h3>
+        <button id="login-close" class="absolute top-2 right-4">&cross;</button>
+        <form action="post" target="_blank">
+            <div class="flex flex-row justify-between">
+                <label for="username" class="self-center">Användarnamn: </label>
+                <input type="text" name="username" placeholder="Ditt användarnamn"
+                    class="rounded bg-slate-200 px-1 mx-1 my-2" required>
+            </div>
+            <div class="flex flex-row justify-between">
+                <label for="password" class="password self-center">Lösenord: </label>
+                <input type="password" name="password" placeholder="Ditt lösenord"
+                    class="rounded mb-4 bg-slate-200 px-1 mx-1 my-2" required>
+            </div>
+            <div class="flex flex-row justify-between">
+                <button id="login-cancel" type="reset"
+                    class="m-2 p-2 border-2 border-gray-600 rounded-lg shadow-slate-800 shadow-md hover:bg-yellow-400">Avbryt</button>
+
+                <button type="submit"
+                    class="m-2 p-2 border-2 border-gray-600 rounded-lg shadow-slate-800 shadow-md hover:bg-yellow-400">Logga
+                    in</button>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="signup-modal"
+        class="bg-yellow-600 rounded max-w-md p-6 fixed left-1/3 top-1/4 flex-wrap justify-center items-center z-50 shadow-grasy-800 shadow-lg hidden">
+        <h3 class="text-2xl font-semibold uppercase text-center my-3">Registera ny användare</h3>
+        <button id="signup-close" class="absolute top-2 right-4">&cross;</button>
+        <form action="post">
+
+            <div class="flex flex-row justify-between">
+                <label for="first-name" class="self-center">Förnamn: </label>
+                <input type="text" name="first-name" placeholder="Ditt förnamn"
+                    class="rounded bg-slate-200 px-1 mx-1 my-2" required>
+            </div>
+
+            <div class="flex flex-row justify-between">
+                <label for="last-name" class="self-center">Efternamn: </label>
+                <input type="text" name="last-name" placeholder="Ditt efternamn"
+                    class="rounded bg-slate-200 px-1 mx-1 my-2" required>
+            </div>
+
+            <div class="flex flex-row justify-between">
+                <label for="email" class="self-center">Epost: </label>
+                <input type="email" name="email" placeholder="Din epost" class="rounded bg-slate-200 px-1 mx-1 my-2" required>
+            </div>
+
+            <div class="flex-row justify-between">
+                <label for="username" class="self-center">Användarnamn: </label>
+                <input type="text" name="username" placeholder="Ditt användarnamn"
+                    class="rounded bg-slate-200 px-1 mx-1 my-2" required>
+            </div>
+
+            <div class="flex flex-row justify-between">
+                <label for="password" class="password self-center">Lösenord: </label>
+                <input type="password" name="password" placeholder="Ditt lösenord"
+                    class="rounded mb-4 bg-slate-200 px-1 mx-1 my-2" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" title="Lösenordet ska innehålla: Minst 8 karaktärer varav minst 1 bokstav och minst 1 siffra. Inga specialtecken!">
+            </div>
+
+            <div class="flex flex-row justify-between">
+                <button id="signup-cancel"
+                    class="m-2 p-2 border-2 border-gray-600 rounded-lg shadow-slate-800 shadow-md hover:bg-yellow-400">Avbryt</button>
+                <button type="submit"
+                    class="m-2 p-2 border-2 border-gray-600 rounded-lg shadow-slate-800 shadow-md hover:bg-yellow-400 ">Skapa
+                    användare</button>
+
+            </div>
+        </form>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
